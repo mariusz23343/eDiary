@@ -3,22 +3,17 @@ TIU project including WebAPI (.net Core) and client application (Angular)
 
 
 Projekt nasz zakłada aplikacje umożliwającą administrowanie szkolnym dziennikiem.
-Zakłada on dwa typy uzytkowników jakimi są:
-
-  - Nauczyciele
-  - Uczniowie
+Zakłada on dwa typy uzytkowników jakimi są Nauczyciele oraz Uczniowie.
  
-Nauczyciele:
-- Mogą wystawiać oceny z danego przedmiotu
-- Tworzą klasy
-- Mają możliwość komunikowania się z rodzicami poprzez pisanie emaili
-- Mają możliość zmiany ocen
-- Zatwierdzają zmiane klasy ucznia
-- Mają możliwość analizowania ocen danego roku
+Nauczyciele mogą wystawiać oceny z danego przedmiotu, tworzyć klasy, mają również możliwość
+komunikowania się z rodzicami poprzez pisanie emaili.
+Dodatkowo mają możliość zmiany ocen. Ponadto nauczyciele zatwierdzają zmianę 
+klasy ucznia oraz analizowanie ocena danego rocznika. 
 
-Uczniowie:
-- Mają możliwość podglądu ocen z danego przedmiotu
-- Mają możliość zapisywania się na wybrane przedmioty
-- Mają możliwość przeniesienia się z klasy do klasy
-- Mają możliwość zmiany nauczyciela od wybranego przedmiotu
+Uczniowie mają możliwość podglądu ocen z danego 
+przedmiotu, zapisywania się na wybrane przedmioty, 
+przeniesienia się z klasy do klasy, 
+zmiany nauczyciela od wybranego przedmiotu.
+
+Dodatkową możliwością obu typów użytkowników jest możliwość zmiany hasła.
 
