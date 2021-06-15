@@ -1,24 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Uczelnia\\Programowanie\\TIU PROJEKT\\eDiaryAPI\\eDiaryAPI.csproj": {}
+    "D:\\Inżynierka\\III rok inż\\VI sem\\TIU\\Projekt\\eDiaryAPI\\eDiaryAPI.csproj": {}
   },
   "projects": {
-    "D:\\Uczelnia\\Programowanie\\TIU PROJEKT\\eDiaryAPI\\eDiaryAPI.csproj": {
+    "D:\\Inżynierka\\III rok inż\\VI sem\\TIU\\Projekt\\eDiaryAPI\\eDiaryAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Uczelnia\\Programowanie\\TIU PROJEKT\\eDiaryAPI\\eDiaryAPI.csproj",
+        "projectUniqueName": "D:\\Inżynierka\\III rok inż\\VI sem\\TIU\\Projekt\\eDiaryAPI\\eDiaryAPI.csproj",
         "projectName": "eDiaryAPI",
-        "projectPath": "D:\\Uczelnia\\Programowanie\\TIU PROJEKT\\eDiaryAPI\\eDiaryAPI.csproj",
-        "packagesPath": "C:\\Users\\Mariusz\\.nuget\\packages\\",
-        "outputPath": "D:\\Uczelnia\\Programowanie\\TIU PROJEKT\\eDiaryAPI\\obj\\",
+        "projectPath": "D:\\Inżynierka\\III rok inż\\VI sem\\TIU\\Projekt\\eDiaryAPI\\eDiaryAPI.csproj",
+        "packagesPath": "C:\\Users\\kochm\\.nuget\\packages\\",
+        "outputPath": "D:\\Inżynierka\\III rok inż\\VI sem\\TIU\\Projekt\\eDiaryAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mariusz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kochm\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -89,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
