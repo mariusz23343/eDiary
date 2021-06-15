@@ -10,7 +10,7 @@ using eDiaryAPI.Models.DbModels;
 namespace eDiaryAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210609155942_InitialMigration")]
+    [Migration("20210609163016_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
