@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DfjmaOTcsk2XC5ddGL6O6Ehx+ccP6AXOvMim5ZvIfR2SN79qktBd8zrhp5n9vKBEckrA/elvye8GLABMa1UmuA==",
+  "dgSpecHash": "kBrGz8xf78nmL2HWm3FyvuoawKQeFrM0IysoEI5croUAEzIPoecWxyHfUaqqjnEUrZaodoitrQq5NtudA/0row==",
   "success": true,
-  "projectFilePath": "D:\\Uczelnia\\Programowanie\\projekt tiu\\eDiaryAPI\\eDiaryAPI.csproj",
+  "projectFilePath": "D:\\Uczelnia\\Programowanie\\TIU PROJEKT\\eDiaryAPI\\eDiaryAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mariusz\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Mariusz\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

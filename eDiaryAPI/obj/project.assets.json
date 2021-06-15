@@ -200,11 +200,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Uczelnia\\Programowanie\\projekt tiu\\eDiaryAPI\\eDiaryAPI.csproj",
+      "projectUniqueName": "D:\\Uczelnia\\Programowanie\\TIU PROJEKT\\eDiaryAPI\\eDiaryAPI.csproj",
       "projectName": "eDiaryAPI",
-      "projectPath": "D:\\Uczelnia\\Programowanie\\projekt tiu\\eDiaryAPI\\eDiaryAPI.csproj",
+      "projectPath": "D:\\Uczelnia\\Programowanie\\TIU PROJEKT\\eDiaryAPI\\eDiaryAPI.csproj",
       "packagesPath": "C:\\Users\\Mariusz\\.nuget\\packages\\",
-      "outputPath": "D:\\Uczelnia\\Programowanie\\projekt tiu\\eDiaryAPI\\obj\\",
+      "outputPath": "D:\\Uczelnia\\Programowanie\\TIU PROJEKT\\eDiaryAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
