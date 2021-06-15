@@ -30,10 +30,7 @@ namespace eDiaryAPI.Repositories
             {
                 student.Login = studentDTO.Login;
             }
-            if (studentDTO.Password != null)
-            {
-                student.Password = studentDTO.Password;
-            }
+            
             if (studentDTO.Name != null)
             {
                 student.Name = studentDTO.Name;
@@ -72,10 +69,7 @@ namespace eDiaryAPI.Repositories
             {
                 teacher.Login = teacherDTO.Login;
             }
-            if (teacherDTO.Password != null)
-            {
-                teacher.Password = teacherDTO.Password;
-            }
+            
             if (teacherDTO.Name != null)
             {
                 teacher.Name = teacherDTO.Name;

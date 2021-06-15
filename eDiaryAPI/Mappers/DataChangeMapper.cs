@@ -14,7 +14,6 @@ namespace eDiaryAPI.Mappers
             var teacherDTO = new TeacherDTO();
 
             teacherDTO.Login = teacher.Login;
-            teacherDTO.Password = teacher.Password;
             teacherDTO.Name = teacher.Name;
             teacherDTO.Surname = teacher.Surname;
             teacherDTO.TelephoneNumber = teacher.PhoneNumber;
@@ -29,7 +28,6 @@ namespace eDiaryAPI.Mappers
             var studentDTO = new StudentDTO();
 
             studentDTO.Login = student.Login;
-            studentDTO.Password = student.Password;
             studentDTO.Name = student.Name;
             studentDTO.Surname = student.Surname;
             studentDTO.Date = student.BirthDate;
