@@ -10,7 +10,7 @@ using eDiaryAPI.Models.DbModels;
 namespace eDiaryAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210609163016_InitialMigration")]
+    [Migration("20210615121829_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -87,7 +87,7 @@ namespace eDiaryAPI.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("BirthDate")
+                    b.Property<DateTime?>("BirthDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int?>("ClassIdId")
@@ -102,8 +102,11 @@ namespace eDiaryAPI.Migrations
                     b.Property<string>("ParentEmail")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<byte[]>("PasswordHash")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Pesel")
                         .HasColumnType("nvarchar(max)");
@@ -149,8 +152,11 @@ namespace eDiaryAPI.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<byte[]>("PasswordHash")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Pesel")
                         .HasColumnType("nvarchar(max)");

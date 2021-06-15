@@ -11,7 +11,8 @@ namespace eDiaryAPI.Models.DbModels
         public virtual SchoolClass ClassId { get; set; }
 
         public string Login { get; set; }
-        public string Password { get; set; }
+        public byte[] PasswordHash { get; set; }
+        public byte[] PasswordSalt { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateTime? BirthDate { get; set; }
