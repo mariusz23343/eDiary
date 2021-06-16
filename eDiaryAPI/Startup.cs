@@ -1,4 +1,6 @@
+using eDiaryAPI.Mappers;
 using eDiaryAPI.Models.DbModels;
+using eDiaryAPI.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +30,9 @@ namespace eDiaryAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IDataChange, DataChange>(); //wstrzykiwanie danych
+            services.AddScoped<IDataChangeMapper, DataChangeMapper>(); //wstrzykiwanie mappera
+         //   services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddDbContext<ApplicationDbContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
             services.AddControllers();
             services.AddSwaggerGen(c =>
