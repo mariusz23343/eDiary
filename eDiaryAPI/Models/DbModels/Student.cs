@@ -9,6 +9,7 @@ namespace eDiaryAPI.Models.DbModels
     {
         public int Id { get; set; }
         public virtual SchoolClass ClassId { get; set; }
+        public int FkClass { get; set; }
 
         public string Login { get; set; }
         public byte[] PasswordHash { get; set; }

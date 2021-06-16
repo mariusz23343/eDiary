@@ -9,7 +9,9 @@ namespace eDiaryAPI.Models.DbModels
     {
         public int Id { get; set; }
         public virtual Student Student { get; set; }
+        public int FkStudent { get; set; }
         public virtual Subject MyProperty { get; set; }
+        public int FkSubject { get; set; }
         public double Mark { get; set; }
 
     }
