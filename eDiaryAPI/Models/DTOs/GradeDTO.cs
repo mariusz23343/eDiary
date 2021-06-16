@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace eDiaryAPI.Models.DTOs
 {
-    public class GradeViewDTO
+    public class GradeDTO
     {
         public int Id { get; set; }
         public double Mark { get; set; }
