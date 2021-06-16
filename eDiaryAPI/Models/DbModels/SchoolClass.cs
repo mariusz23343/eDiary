@@ -20,6 +20,8 @@ namespace eDiaryAPI.Models.DbModels
         public string SchoolYear { get; set; }
 
         public virtual ICollection<Teacher> Teachers { get; set; }
+        
+       
 
 
     }

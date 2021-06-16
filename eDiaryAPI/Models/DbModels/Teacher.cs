@@ -23,6 +23,7 @@ namespace eDiaryAPI.Models.DbModels
         public string Pesel{ get; set; }
 
         public virtual ICollection<SchoolClass> TeacherClasses { get; set; }
+        public virtual ICollection<Subject> TeacherSubjects { get; set; }
 
     }
 }
