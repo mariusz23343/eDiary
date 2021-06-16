@@ -46,10 +46,14 @@ namespace eDiaryAPI
             services.AddScoped<IDataChange, DataChange>(); //wstrzykiwanie danych
             services.AddScoped<IDataChangeMapper, DataChangeMapper>(); //wstrzykiwanie mappera
 <<<<<<< HEAD
+<<<<<<< HEAD
          //   services.AddScoped<IAuthRepository, AuthRepository>();
 =======
            // services.AddScoped<IAuthRepository, AuthRepository>();
 >>>>>>> 2cb7d86690012ae952d54a9f7e3837ebe8c5ffc8
+=======
+            services.AddScoped<IAuthRepository, AuthRepository>();
+>>>>>>> 27167af07731618e60c9ca0fd8177af9a5458a19
             services.AddDbContext<ApplicationDbContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
             services.AddControllers();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
