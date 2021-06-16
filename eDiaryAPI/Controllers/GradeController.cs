@@ -22,7 +22,7 @@ namespace eDiaryAPI.Controllers
             _repository = repository;
             _mapper = mapper;
         }
-        [HttpPost]
+        [HttpPost("edit")]
         public async Task<IActionResult> edit([FromBody] GradeDTO dto)
         {
             var editedGrade = await _repository.ChangeGrande(dto);
@@ -33,7 +33,7 @@ namespace eDiaryAPI.Controllers
             }
             return Ok(_mapper.MapGradeChange(editedGrade));
         }
-        [HttpPost]
+        [HttpPost("put")]
         public async Task<IActionResult> put([FromBody] GradeViewOnlyDTO dto)
         {
             var addGrade = await _repository.PutGrade(dto);
