@@ -11,6 +11,6 @@ namespace eDiaryAPI.Repositories
     {
         public Task<Student> ChangeData(StudentDTO studentDTO);
         public Task<Teacher> ChangeData(TeacherDTO teacherDTO);
-
+        public Task<List<Student>> GetStudent(int classId);
     }
 }

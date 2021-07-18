@@ -93,5 +93,11 @@ namespace eDiaryAPI.Repositories
 
             return teacher;
         }
+
+        public async Task<List<Student>> GetStudent(int classId)
+        {
+            var studentsList = await _context.Students.Where(x => x.FkClass == classId).ToListAsync();
+            return studentsList;
+        }
     }
 }

@@ -13,6 +13,6 @@ namespace eDiaryAPI.Models.DTOs
         public DateTime? Date { get; set; }
         public string? EmailParent { get; set; }
         public string? Login { get; set; }
-        public string? Password { get; set; }
+        public string? Pesel { get; set; }
     }
 }

@@ -26,13 +26,13 @@ namespace eDiaryAPI.Mappers
         public StudentDTO MapResponse(Student student)
         {
             var studentDTO = new StudentDTO();
-
+            studentDTO.Id = student.Id;
             studentDTO.Login = student.Login;
             studentDTO.Name = student.Name;
             studentDTO.Surname = student.Surname;
             studentDTO.Date = student.BirthDate;
             studentDTO.EmailParent = student.ParentEmail;
-
+            studentDTO.Pesel = student.Pesel;
             return studentDTO;
         }
     }

@@ -34,5 +34,20 @@ namespace eDiaryAPI.Controllers
             }
             return Ok(_mapper.MapResponse(editedStudent));
         }
+        [HttpGet("id")]
+        public async Task<IActionResult> get(int id)
+        {
+            var list = await _repository.GetStudent(id);
+            if (list == null) return BadRequest();
+            else
+            {
+                var mappedResponse = new List<StudentDTO>();
+                foreach(var item in list)
+                {
+                    mappedResponse.Add(_mapper.MapResponse(item));
+                }
+                return Ok(mappedResponse);
+            }
+        }
     }
 }

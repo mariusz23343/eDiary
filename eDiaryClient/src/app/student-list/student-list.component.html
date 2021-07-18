@@ -1,0 +1,28 @@
+<p>student-list works!</p>
+<select [(ngModel)]="selectedClass">
+  <option [ngValue]="1">Klasa 1</option>
+  <option [ngValue]="2">Klasa 2</option>
+  <option [ngValue]="3">Klasa 3</option>
+</select>
+<button (click)="getStudentsList()">Załaduj studentów</button>
+<table class="table">
+  <thead>
+    <td>Id</td>
+    <td>Imie</td>
+    <td>Nazwisko</td>
+    <td>Data</td>
+    <td>mail rodzica</td>
+    <td>pesel</td>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.surname}}</td>
+      <td>{{student.date}}</td>
+      <td>{{student.emailParent}}</td>
+      <td>{{student.pesel}}</td>
+    </tr>
+  </tbody>
+</table>
