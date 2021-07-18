@@ -44,8 +44,13 @@ namespace eDiaryAPI
                                   });
             });
             services.AddScoped<IDataChange, DataChange>(); //wstrzykiwanie danych
-            services.AddScoped<IDataChangeMapper, DataChangeMapper>(); //wstrzykiwanie mappera
+            services.AddSingleton<IDataChangeMapper, DataChangeMapper>(); //wstrzykiwanie mappera
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IGradeStudent, GradeStudent>();
+            services.AddScoped<IClassManagement, ClassManagement>();
+            services.AddScoped<ISubjectManagement, SubjectManagement>();
+            services.AddScoped<IDataChange, DataChange>();
+            
             services.AddDbContext<ApplicationDbContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
             services.AddControllers();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>

@@ -1,4 +1,5 @@
-﻿using eDiaryAPI.Models.DbModels;
+﻿using eDiaryAPI.Mappers;
+using eDiaryAPI.Models.DbModels;
 using eDiaryAPI.Models.DTOs;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -11,10 +12,12 @@ namespace eDiaryAPI.Repositories
     public class DataChange : IDataChange
     {
         private readonly ApplicationDbContext _context;
+        private readonly DataChangeMapper _mapper;
 
-        public DataChange(ApplicationDbContext context)
+        public DataChange(ApplicationDbContext context, DataChangeMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         public async Task<Student> ChangeData(StudentDTO studentDTO)
@@ -92,6 +95,11 @@ namespace eDiaryAPI.Repositories
             await _context.SaveChangesAsync();
 
             return teacher;
+        }
+        public async Task<IList<Student>> getStudents(int id)
+        {
+            var students = await _context.Students.Where(x => x.FkClass == id).ToListAsync();
+            return students;
         }
     }
 }

@@ -31,6 +31,7 @@ namespace eDiaryAPI.Controllers
             {
                 return BadRequest("Couldn't Edit Data");
             }
+            
             return Ok(_mapper.MapResponse(editedTeacher));
         }
     }
