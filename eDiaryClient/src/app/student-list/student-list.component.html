@@ -1,10 +1,15 @@
 <p>student-list works!</p>
-<select [(ngModel)]="selectedClass">
-  <option [ngValue]="1">Klasa 1</option>
-  <option [ngValue]="2">Klasa 2</option>
-  <option [ngValue]="3">Klasa 3</option>
-</select>
-<button (click)="getStudentsList()">Załaduj studentów</button>
+<div style="margin-bottom:6px;">
+  <select [(ngModel)]="selectedClass" >
+    <option [ngValue]="1">Klasa 1</option>
+    <option [ngValue]="2">Klasa 2</option>
+    <option [ngValue]="3">Klasa 3</option>
+
+  </select>
+  <button style="margin-left: 8px;" class="btn btn-primary" (click)="getStudentsList()">Załaduj studentów</button>
+</div>
+
+
 <table class="table">
   <thead>
     <td>Id</td>
@@ -13,6 +18,7 @@
     <td>Data</td>
     <td>mail rodzica</td>
     <td>pesel</td>
+    <td>oceny</td>
 
   </thead>
   <tbody>
@@ -23,6 +29,7 @@
       <td>{{student.date}}</td>
       <td>{{student.emailParent}}</td>
       <td>{{student.pesel}}</td>
+      <button class="btn btn-primary" (click)="onShowGrades(student)">Oceny Ucznia</button>
     </tr>
   </tbody>
 </table>

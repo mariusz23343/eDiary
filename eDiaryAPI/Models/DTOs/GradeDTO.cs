@@ -11,5 +11,6 @@ namespace eDiaryAPI.Models.DTOs
         public double Mark { get; set; }
         public int StudentId { get; set; }
         public int SubjectId { get; set; }
+        public string SubjectName { get; set; }
     }
 }

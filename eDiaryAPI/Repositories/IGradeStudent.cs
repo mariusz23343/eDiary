@@ -1,5 +1,6 @@
 ﻿using eDiaryAPI.Models.DbModels;
 using eDiaryAPI.Models.DTOs;
+using eDiaryAPI.ViewModels;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +11,6 @@ namespace eDiaryAPI.Repositories
 {
     public interface IGradeStudent
     {
-        public Task<IList<Grade>> ShowGrade(GradeDTO gradeDTO);
+        public Task<StudentGradesViewModel> ShowGrade(int id);
     }
 }

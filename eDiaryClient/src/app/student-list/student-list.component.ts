@@ -10,6 +10,7 @@ import {ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
 export class StudentListComponent implements OnInit {
   students:Student[]=[];
   selectedClass:number=1;
+
   constructor(private studentService: ShowStudentService, private route: ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
@@ -20,6 +21,11 @@ export class StudentListComponent implements OnInit {
     this.studentService.getStudents(this.selectedClass).subscribe(res=>this.students=res);
     console.log(this.students);
   }
+  onShowGrades(student:Student){
+    console.log(student)
+    this.router.navigateByUrl('student/get/'+student.id);
+  }
+
 
 
 }

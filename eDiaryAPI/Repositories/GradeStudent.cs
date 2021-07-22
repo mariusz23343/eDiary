@@ -1,5 +1,6 @@
 ﻿using eDiaryAPI.Models.DbModels;
 using eDiaryAPI.Models.DTOs;
+using eDiaryAPI.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,11 +18,18 @@ namespace eDiaryAPI.Repositories
             _context = context;
         }
 
-        public async Task<IList<Grade>> ShowGrade(GradeDTO gradeDTO)
+        public async Task<StudentGradesViewModel> ShowGrade(int id)
         {
-            var gradeList = await _context.Grades.Where(x=>x.FkStudent == gradeDTO.StudentId).ToListAsync();
+            StudentGradesViewModel sg = new StudentGradesViewModel();
+            sg.subjects = new List<Subject>();
+            sg.grades = await _context.Grades.Where(x=>x.FkStudent == id).ToListAsync();
+            for(int i = 0; i < sg.grades.Count; i++)
+            {
+                sg.subjects.Add(await _context.Subjects.FirstOrDefaultAsync(x => x.Id == sg.grades[i].FkSubject));
+               
+            }
 
-            return gradeList;
+            return sg;
         }
     }
 }

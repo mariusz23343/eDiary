@@ -1,5 +1,6 @@
 ﻿using eDiaryAPI.Models.DbModels;
 using eDiaryAPI.Models.DTOs;
+using eDiaryAPI.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace eDiaryAPI.Mappers
 {
     public interface IGradeStudentMapper
     {
-        public IList<GradeDTO> showGrade(IList<Grade> grade);
+        public IList<GradeDTO> showGrade(StudentGradesViewModel model);
     }
 }

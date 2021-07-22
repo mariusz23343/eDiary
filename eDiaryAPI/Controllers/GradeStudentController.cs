@@ -22,17 +22,17 @@ namespace eDiaryAPI.Controllers
             _repository = repository;
             _mapper = mapper;
         }
-        [HttpGet]
-        public async Task<IActionResult> show([FromBody] GradeDTO dto)
+        [HttpGet("id")]
+        public async Task<IActionResult> show(int id)
         {
-            var shownGrade = await _repository.ShowGrade(dto);
+            var shownGrade = await _repository.ShowGrade(id);
 
             if(shownGrade == null)
             {
                 return BadRequest("Couldn't Show Grade");
             }
-
-            return Ok(_mapper.showGrade(shownGrade));
+          
+            return Ok((_mapper.showGrade(shownGrade)));
         }
     }
 
