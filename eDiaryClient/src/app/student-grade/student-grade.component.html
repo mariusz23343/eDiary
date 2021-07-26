@@ -1,1 +1,20 @@
 <p>student-grade works!</p>
+
+
+
+<table class="table">
+  <thead>
+    <td>Id</td>
+    <td>ocena</td>
+    <td>Przedmiot</td>
+ </thead>
+  <tbody>
+    <tr *ngFor="let grade of studentsGrades">
+      <td>{{grade.id}}</td>
+      <td>{{grade.mark}}</td>
+      <td>{{grade.subjectName}}</td>
+
+      <button class="btn btn-primary" (click)="onEditGrade(grade)">Edytuj ocene</button>
+    </tr>
+  </tbody>
+</table>

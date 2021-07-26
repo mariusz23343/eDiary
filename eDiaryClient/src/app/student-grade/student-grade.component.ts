@@ -2,6 +2,7 @@ import { Grade, GradesService } from './../grades.service'
 import { Component, OnInit } from '@angular/core'
 import { Input, Output, EventEmitter  } from '@angular/core'
 import {ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router'
+
 @Component({
   selector: 'app-student-grade',
   templateUrl: './student-grade.component.html',
@@ -16,9 +17,12 @@ export class StudentGradeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.id = Number.parseInt(this.route.snapshot.paramMap.get('id'));
+
     console.log(this.id);
     this.gradeService.getOneStudentsGrades(this.id).subscribe(res=>this.studentsGrades=res)
+  }
+  onEditGrade(grade:Grade){
+
   }
 
 
