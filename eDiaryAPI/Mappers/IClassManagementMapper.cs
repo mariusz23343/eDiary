@@ -9,6 +9,7 @@ namespace eDiaryAPI.Mappers
 {
     public interface IClassManagementMapper
     {
-        public ClassDTO MappClassAdd(SchoolClass schoolClass);
+        public ClassDTO GetClassesMap(SchoolClass schoolClass);
+        
     }
 }

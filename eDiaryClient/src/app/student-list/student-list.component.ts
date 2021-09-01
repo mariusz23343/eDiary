@@ -9,12 +9,15 @@ import {ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
 })
 export class StudentListComponent implements OnInit {
   students:Student[]=[];
-  selectedClass:number=1;
+  selectedClass:any = 1;
 
   constructor(private studentService: ShowStudentService, private route: ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
-
+    this.route.params.subscribe(params => {
+      this.selectedClass=params['id'];
+    });
+    this.studentService.getStudents(this.selectedClass).subscribe(res=>this.students=res);
   }
   getStudentsList(){
     console.log(typeof(this.selectedClass))

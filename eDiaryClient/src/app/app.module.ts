@@ -9,11 +9,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StudentGradeComponent } from './student-grade/student-grade.component';
+import { LoginComponent } from './login/login.component';
+import { ClasslistComponent } from './classlist/classlist.component';
 @NgModule({
   declarations: [
     AppComponent,
     StudentListComponent,
-    StudentGradeComponent
+    StudentGradeComponent,
+    LoginComponent,
+    ClasslistComponent
   ],
   imports: [
     BrowserModule,

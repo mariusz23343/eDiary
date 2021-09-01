@@ -10,13 +10,13 @@ namespace eDiaryAPI.Mappers
     public class ClassManagementMapper : IClassManagementMapper
     {
    
-        public ClassDTO MappClassAdd(SchoolClass schoolClass)
+        public ClassDTO GetClassesMap(SchoolClass schoolClass)
         {
             var classDTO = new ClassDTO();
 
             classDTO.ClassName = schoolClass.ClassName;
             classDTO.SchoolYear = schoolClass.SchoolYear;
-
+            classDTO.Id = schoolClass.Id;
             return classDTO;
         }
     }

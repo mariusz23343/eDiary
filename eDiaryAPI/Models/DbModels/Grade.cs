@@ -7,7 +7,7 @@ namespace eDiaryAPI.Models.DbModels
 {
     public class Grade
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public virtual Student Student { get; set; }
         public int FkStudent { get; set; }
         public virtual Subject MyProperty { get; set; }

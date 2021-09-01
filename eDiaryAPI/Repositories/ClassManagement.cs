@@ -1,5 +1,6 @@
 ﻿using eDiaryAPI.Models.DbModels;
 using eDiaryAPI.Models.DTOs;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,11 @@ namespace eDiaryAPI.Repositories
             await _context.AddAsync(schoolclass);
             await _context.SaveChangesAsync();
             return schoolclass;
+        }
+
+        public async Task<IList<SchoolClass>> GetClasses()
+        {
+            return await _context.SchoolClasses.ToListAsync();
         }
     }
 }

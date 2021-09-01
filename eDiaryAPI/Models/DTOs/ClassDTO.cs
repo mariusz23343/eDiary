@@ -10,6 +10,6 @@ namespace eDiaryAPI.Models.DTOs
         public string ClassName { get; set; }
 
         public string SchoolYear { get; set; }
-        public int TeacherID { get; set; }
+        public int  Id { get; set; }
     }
 }

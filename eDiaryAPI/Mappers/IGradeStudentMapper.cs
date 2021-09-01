@@ -10,6 +10,7 @@ namespace eDiaryAPI.Mappers
 {
     public interface IGradeStudentMapper
     {
+        public Grade AddGrade(GradeDTO dto, int id);
         public IList<GradeDTO> showGrade(StudentGradesViewModel model);
     }
 }

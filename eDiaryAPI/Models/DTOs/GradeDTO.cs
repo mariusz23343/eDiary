@@ -7,7 +7,7 @@ namespace eDiaryAPI.Models.DTOs
 {
     public class GradeDTO
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public double Mark { get; set; }
         public int StudentId { get; set; }
         public int SubjectId { get; set; }

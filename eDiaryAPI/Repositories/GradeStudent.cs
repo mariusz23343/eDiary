@@ -31,5 +31,15 @@ namespace eDiaryAPI.Repositories
 
             return sg;
         }
+        public async Task <Grade> AddGrade(Grade grade)
+        {
+            
+            await _context.AddAsync(grade);
+            _context.SaveChanges();
+
+           
+            return null;
+
+        }
     }
 }

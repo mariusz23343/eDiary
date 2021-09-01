@@ -12,5 +12,6 @@ namespace eDiaryAPI.Repositories
     public interface IGradeStudent
     {
         public Task<StudentGradesViewModel> ShowGrade(int id);
+        public Task<Grade> AddGrade(Grade grade);
     }
 }

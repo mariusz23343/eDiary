@@ -46,7 +46,9 @@ namespace eDiaryAPI
             services.AddScoped<IDataChange, DataChange>(); //wstrzykiwanie danych
             services.AddScoped<IDataChangeMapper, DataChangeMapper>(); //wstrzykiwanie mappera
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IClassManagementMapper, ClassManagementMapper>();
             services.AddScoped<IGradeStudent, GradeStudent>();
+            services.AddScoped<IClassManagement, ClassManagement>();
             services.AddScoped<IGradeStudentMapper, GradeStudentMapper>();
             services.AddDbContext<ApplicationDbContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
             services.AddControllers();

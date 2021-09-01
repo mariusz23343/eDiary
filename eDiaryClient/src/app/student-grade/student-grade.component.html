@@ -1,9 +1,5 @@
-<p>student-grade works!</p>
-
-
-
 <table class="table">
-  <thead>
+  <thead class="thead-dark">
     <td>Id</td>
     <td>ocena</td>
     <td>Przedmiot</td>
@@ -14,7 +10,7 @@
       <td>{{grade.mark}}</td>
       <td>{{grade.subjectName}}</td>
 
-      <button class="btn btn-primary" (click)="onEditGrade(grade)">Edytuj ocene</button>
+      <button class="btn btn-primary" style="width:100%" (click)="onEditGrade(grade)">Edytuj ocene</button>
     </tr>
   </tbody>
 </table>

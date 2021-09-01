@@ -31,7 +31,18 @@ namespace eDiaryAPI.Controllers
             {
                 return BadRequest("Couldn't Create School  Class");
             }
-            return Ok(_mapper.MappClassAdd(addedClass));
+            return Ok(_mapper.GetClassesMap(addedClass));
+        }
+        [HttpGet]
+        public async Task<IActionResult> Show()
+        {
+            var classes = await _repository.GetClasses();
+            var mappedResult = new List<ClassDTO>();
+            foreach(var item in classes)
+            {
+                mappedResult.Add(_mapper.GetClassesMap(item));
+            }
+            return Ok(mappedResult);
         }
 
     }

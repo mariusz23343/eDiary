@@ -34,5 +34,16 @@ namespace eDiaryAPI.Mappers
 
             return gradeDTO;
         }
+        public Grade AddGrade(GradeDTO dto, int id)
+        {
+            var grade = new Grade
+            {
+                FkStudent = dto.StudentId,
+                FkSubject = dto.SubjectId,
+                Mark = dto.Mark
+
+            };
+            return grade;
+        }
     }
 }

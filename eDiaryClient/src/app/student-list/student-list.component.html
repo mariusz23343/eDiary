@@ -1,35 +1,30 @@
-<p>student-list works!</p>
-<div style="margin-bottom:6px;">
-  <select [(ngModel)]="selectedClass" >
-    <option [ngValue]="1">Klasa 1</option>
-    <option [ngValue]="2">Klasa 2</option>
-    <option [ngValue]="3">Klasa 3</option>
+<div>
+  <table class="table">
+    <thead class="thead-dark">
 
-  </select>
-  <button style="margin-left: 8px;" class="btn btn-primary" (click)="getStudentsList()">Załaduj studentów</button>
+      <tr>
+        <td>Id</td>
+      <td>Imie</td>
+      <td>Nazwisko</td>
+      <td>Data</td>
+      <td>mail rodzica</td>
+      <td>pesel</td>
+      <td>akcje</td>
+      </tr>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.surname}}</td>
+        <td>{{student.date}}</td>
+        <td>{{student.emailParent}}</td>
+        <td>{{student.pesel}}</td>
+        <button class="btn btn-outline-success m-1" style="width:48%"(click)="onShowGrades(student)">Oceny Ucznia</button>
+        <button type="button" class="btn btn-outline-danger m-1" style="width:48%">Usuń Ucznia Z Klasy</button>
+      </tr>
+    </tbody>
+  </table>
+
 </div>
-
-
-<table class="table">
-  <thead>
-    <td>Id</td>
-    <td>Imie</td>
-    <td>Nazwisko</td>
-    <td>Data</td>
-    <td>mail rodzica</td>
-    <td>pesel</td>
-    <td>oceny</td>
-
-  </thead>
-  <tbody>
-    <tr *ngFor="let student of students">
-      <td>{{student.id}}</td>
-      <td>{{student.name}}</td>
-      <td>{{student.surname}}</td>
-      <td>{{student.date}}</td>
-      <td>{{student.emailParent}}</td>
-      <td>{{student.pesel}}</td>
-      <button class="btn btn-primary" (click)="onShowGrades(student)">Oceny Ucznia</button>
-    </tr>
-  </tbody>
-</table>

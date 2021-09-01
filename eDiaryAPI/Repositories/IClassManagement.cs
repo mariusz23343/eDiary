@@ -10,6 +10,7 @@ namespace eDiaryAPI.Repositories
     public interface IClassManagement
     {
         public Task<SchoolClass> AddClass(ClassDTO classDTO);
+        public Task<IList<SchoolClass>> GetClasses();
 
     }
 }

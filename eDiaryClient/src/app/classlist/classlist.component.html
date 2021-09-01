@@ -1,0 +1,16 @@
+<table class="table">
+  <thead class="thead-dark">
+    <td>Id</td>
+    <td>Rok Szkolny</td>
+    <td>Klasa</td>
+ </thead>
+  <tbody>
+    <tr *ngFor="let class of classList">
+      <td>{{class.id}}</td>
+      <td>{{class.schoolYear}}</td>
+      <td>{{class.className}}</td>
+
+      <button class="btn btn-primary" style="width:100%" (click)="onShowStudent(class)">Przejdź do klasy</button>
+    </tr>
+  </tbody>
+</table>
