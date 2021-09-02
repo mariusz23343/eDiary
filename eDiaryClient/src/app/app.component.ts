@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'eDiaryClient';
+  OnInit(){}
+  constructor(private route: ActivatedRoute, private router:Router){}
+  onAddStudent(){
+    console.log('lol');
+    this.router.navigateByUrl( 'student/addStudent/');
+  }
+  onAddClass(){
+    console.log('lol');
+    this.router.navigateByUrl( 'class/addClass/');
+  }
 }

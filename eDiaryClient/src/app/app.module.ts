@@ -11,13 +11,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StudentGradeComponent } from './student-grade/student-grade.component';
 import { LoginComponent } from './login/login.component';
 import { ClasslistComponent } from './classlist/classlist.component';
+import { AddStudentComponent } from './add-student/add-student.component';
+import { AddClassComponent } from './add-class/add-class.component';
 @NgModule({
   declarations: [
     AppComponent,
     StudentListComponent,
     StudentGradeComponent,
     LoginComponent,
-    ClasslistComponent
+    ClasslistComponent,
+    AddStudentComponent,
+    AddClassComponent
   ],
   imports: [
     BrowserModule,
