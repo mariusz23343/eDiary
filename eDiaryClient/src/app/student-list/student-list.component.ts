@@ -1,6 +1,7 @@
 import { Student, ShowStudentService } from './../student.service';
 import { Component, OnInit,  Input, Output, EventEmitter  } from '@angular/core';
 import {ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
+import { Grade } from '../grades.service';
 
 @Component({
   selector: 'app-student-list',
@@ -29,6 +30,9 @@ export class StudentListComponent implements OnInit {
     this.router.navigateByUrl('student/get/'+student.id);
   }
 
+  onAddGrade(id:Number){
+    this.router.navigateByUrl('grade/addGrade/'+id);
+  }
 
 
 }

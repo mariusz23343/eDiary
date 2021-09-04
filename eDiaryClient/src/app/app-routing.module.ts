@@ -1,3 +1,5 @@
+import { DeleteStudentComponent } from './delete-student/delete-student.component';
+import { AddGradeComponent } from './add-grade/add-grade.component';
 import { AddClassComponent } from './add-class/add-class.component';
 import { ClasslistComponent } from './classlist/classlist.component';
 import { StudentListComponent } from './student-list/student-list.component';
@@ -14,6 +16,8 @@ const routes:Routes=[
   {path: '', component: ClasslistComponent},
   {path: 'student/addStudent/', component: AddStudentComponent},
   {path: 'class/addClass/', component: AddClassComponent},
+  {path: 'grade/addGrade/:id', component: AddGradeComponent},
+  {path: 'deleteStudent', component: DeleteStudentComponent},
 
 ]
 @NgModule({

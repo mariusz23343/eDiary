@@ -41,5 +41,22 @@ namespace eDiaryAPI.Repositories
             return null;
 
         }
+        public async Task<IList<Subject>> GetSubject()
+        {
+            return await _context.Subjects.ToListAsync();
+        }
+        public async Task<Grade> DeleteGrade(int id)
+        {
+            var grade = await _context.Grades.FirstOrDefaultAsync(x => x.Id == id);
+            if (grade == null) return null;
+            else
+            {
+                _context.Grades.Remove(grade);
+                await _context.SaveChangesAsync();
+                return grade;
+            }
+
+        }
+        
     }
 }

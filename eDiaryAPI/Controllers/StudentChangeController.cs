@@ -49,5 +49,24 @@ namespace eDiaryAPI.Controllers
                 return Ok(mappedResponse);
             }
         }
+        [HttpGet]
+        public async Task<IActionResult> getAllStudents()
+        {
+            var studentsList = _repository.GetAllStudent();
+            var mappedResponse = new List<StudentDTO>();
+            foreach (var item in studentsList.Result)
+            {
+                mappedResponse.Add(_mapper.MapResponse(item));
+            }
+            return Ok(mappedResponse);
+            
+        }
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var student = await _repository.DeleteStudent(id);
+            if (student == null) return NoContent();
+            else return Ok("Usunięto");
+        }
     }
 }

@@ -1,16 +1,24 @@
-<table class="table">
+<table class="table col-sm-12" style="width: 100%;table-layout: fixed;">
   <thead class="thead-dark">
     <td>Id</td>
     <td>ocena</td>
     <td>Przedmiot</td>
+    <td></td>
+    <td></td>
+   
  </thead>
   <tbody>
     <tr *ngFor="let grade of studentsGrades">
-      <td>{{grade.id}}</td>
+      <td >{{grade.id}}</td>
       <td>{{grade.mark}}</td>
       <td>{{grade.subjectName}}</td>
 
-      <button class="btn btn-primary" style="width:100%" (click)="onEditGrade(grade)">Edytuj ocene</button>
+      <td>
+        <button class="btn btn-outline-danger m-1" style="width:100%" (click)="onDeleteGrade(grade)">Usuń ocenę</button>
+    </td>
+      <td> <button class="btn btn-outline-warning m-1" style="width:100%" (click)="onEditGrade(grade)">Edytuj ocenę</button></td>
+
+
     </tr>
   </tbody>
 </table>

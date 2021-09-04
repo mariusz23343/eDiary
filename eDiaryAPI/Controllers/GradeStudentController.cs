@@ -45,6 +45,30 @@ namespace eDiaryAPI.Controllers
             return Created("dodano", result);
 
         }
+        [HttpGet]
+        public async Task<IActionResult> GetSubjects()
+        {
+            var result = _repository.GetSubject();
+            var response = new List<SubjectDTO>();
+            foreach(var item in result.Result)
+            {
+                var dto = new SubjectDTO
+                {
+                    SubjectName = item.SubjectName,
+                    Id = item.Id
+                };
+                response.Add(dto);
+            }
+            return Ok(response);
+            
+        }
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var grade = await _repository.DeleteGrade(id);
+            if (grade == null) return NotFound("Nie znaleziono oceny");
+            else return Ok();
+        }
     }
 
 }

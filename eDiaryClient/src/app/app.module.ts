@@ -13,6 +13,8 @@ import { LoginComponent } from './login/login.component';
 import { ClasslistComponent } from './classlist/classlist.component';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { AddClassComponent } from './add-class/add-class.component';
+import { AddGradeComponent } from './add-grade/add-grade.component';
+import { DeleteStudentComponent } from './delete-student/delete-student.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { AddClassComponent } from './add-class/add-class.component';
     LoginComponent,
     ClasslistComponent,
     AddStudentComponent,
-    AddClassComponent
+    AddClassComponent,
+    AddGradeComponent,
+    DeleteStudentComponent
   ],
   imports: [
     BrowserModule,

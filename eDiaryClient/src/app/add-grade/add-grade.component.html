@@ -1,0 +1,11 @@
+<div class="input-group input-group-lg">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-lg">Ocena</span>
+  </div>
+  <input [(ngModel)]="grade" type="number" min="1" max="6" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+</div>
+<select [(ngModel)]="selectedSubject" style="width:100%; font-size: larger; margin-top: 10px;">
+  <option *ngFor="let subject of subjects" [ngValue] = "subject" >{{subject.subjectName}}</option>
+</select>
+<button (click)="onShow()">Pokaz</button>
+<button (click)="onAddGrade()" style="margin-top: 22px;" class="btn btn-outline-success col-md-12 text-center">Dodaj Ocene</button>

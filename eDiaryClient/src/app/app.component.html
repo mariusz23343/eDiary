@@ -12,7 +12,7 @@
     <button class="btn btn-outline-success m-1"(click)="onAddClass()" type="button">Dodaj Klase</button>
     <button class="btn btn-outline-warning m-1" type="button">Edytuj Ucznia</button>
     <button class="btn btn-outline-warning m-1" type="button">Edytuj Klase</button>
-    <button class="btn btn-outline-danger m-1" type="button">Usuń Ucznia</button>
+    <button class="btn btn-outline-danger m-1" (click)="onDeleteStudent()" type="button">Usuń Ucznia</button>
     <button class="btn btn-outline-danger m-1" type="button">Usuń Klasę</button>
   </form>
 
@@ -21,4 +21,9 @@
   <div class="main">
     <router-outlet></router-outlet>
   </div>
+  <footer class="text-center text-white fixed-bottom navbar navbar-dark bg-dark">
 
+    <div class="text-center p-3" >
+        Autorzy aplikacji: Mariusz Byczek, Mikołaj Koch, Olaf Kulawik
+    </div>
+  </footer>

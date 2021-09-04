@@ -11,6 +11,10 @@ export interface Student{
   emailParent:string,
   pesel:string
 }
+export interface Subject{
+  id:number,
+  subjectName:string
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -24,5 +28,14 @@ export class ShowStudentService {
     return this.http.post<StudentAdd>("https://localhost:44354/api/Auth/registerStudent", student).pipe(tap(
       res=>this.actualisation.next('dodano studenta')
     ));
+  }
+  getSubjects():Observable<Subject[]>{
+    return this.http.get<Subject[]>('https://localhost:44354/api/GradeStudent');
+  }
+  getAllStudents():Observable<Student[]>{
+    return this.http.get<Student[]>('https://localhost:44354/api/StudentChange');
+  }
+  deleteStudent(id:Number){
+    return this.http.delete<Student>('https://localhost:44354/api/StudentChange?id='+id);
   }
 }

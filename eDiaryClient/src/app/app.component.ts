@@ -18,4 +18,7 @@ export class AppComponent {
     console.log('lol');
     this.router.navigateByUrl( 'class/addClass/');
   }
+  onDeleteStudent(){
+    this.router.navigateByUrl( 'deleteStudent');
+  }
 }

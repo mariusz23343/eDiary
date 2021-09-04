@@ -99,5 +99,21 @@ namespace eDiaryAPI.Repositories
             var studentsList = await _context.Students.Where(x => x.FkClass == classId).ToListAsync();
             return studentsList;
         }
+        public async Task<Student> DeleteStudent(int id)
+        {
+            var student = await _context.Students.FirstOrDefaultAsync(x => x.Id == id);
+            if (student == null) return null;
+            else
+            {
+                _context.Students.Remove(student);
+                await _context.SaveChangesAsync();
+                return student;
+            }
+        }
+        public async Task<IList<Student>> GetAllStudent()
+        {
+            var studentList = await _context.Students.ToListAsync();
+            return studentList;
+        }
     }
 }

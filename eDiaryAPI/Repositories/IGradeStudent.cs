@@ -13,5 +13,7 @@ namespace eDiaryAPI.Repositories
     {
         public Task<StudentGradesViewModel> ShowGrade(int id);
         public Task<Grade> AddGrade(Grade grade);
+        public Task<IList<Subject>> GetSubject();
+        public Task<Grade> DeleteGrade(int id);
     }
 }

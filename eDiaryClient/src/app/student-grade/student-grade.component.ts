@@ -26,6 +26,10 @@ export class StudentGradeComponent implements OnInit {
   onEditGrade(grade:Grade){
 
   }
+  onDeleteGrade(grade:Grade){
+    this.gradeService.deleteGrade(grade.id!).subscribe(res=>window.location.reload())
+  }
+
 
 
 }
