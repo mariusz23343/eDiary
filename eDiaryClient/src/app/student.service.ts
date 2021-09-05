@@ -15,6 +15,10 @@ export interface Subject{
   id:number,
   subjectName:string
 }
+export interface AddClassToStudent{
+  studentId:Number,
+  classId:number
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -37,5 +41,11 @@ export class ShowStudentService {
   }
   deleteStudent(id:Number){
     return this.http.delete<Student>('https://localhost:44354/api/StudentChange?id='+id);
+  }
+  getStudentsWithoutClass(){
+    return this.http.get<Student[]>('https://localhost:44354/api/StudentChange/GetStudentsWithoutClass');
+  }
+  addClassToStudent(dto:AddClassToStudent){
+    return this.http.put<Student>('https://localhost:44354/api/StudentChange', dto);
   }
 }

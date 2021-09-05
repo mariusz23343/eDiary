@@ -52,9 +52,9 @@ namespace eDiaryAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> getAllStudents()
         {
-            var studentsList = _repository.GetAllStudent();
+            var studentsList = await _repository.GetAllStudent();
             var mappedResponse = new List<StudentDTO>();
-            foreach (var item in studentsList.Result)
+            foreach (var item in studentsList)
             {
                 mappedResponse.Add(_mapper.MapResponse(item));
             }
@@ -67,6 +67,30 @@ namespace eDiaryAPI.Controllers
             var student = await _repository.DeleteStudent(id);
             if (student == null) return NoContent();
             else return Ok("Usunięto");
+        }
+        [HttpGet("GetStudentsWithoutClass")]
+        public async Task<IActionResult> GetAllStudentsWithoutClass()
+        {
+            var list = await _repository.GetAllStudentWithoutClass();
+            var mappedResponse = new List<StudentDTO>();
+            foreach (var item in list)
+            {
+                mappedResponse.Add(_mapper.MapResponse(item));
+            }
+            return Ok(mappedResponse);
+        }
+        [HttpPut]
+        public async Task<IActionResult> AddClassToStudent(PutStudentsClassDto dto)
+        {
+            var student = await _repository.PutStudentsClass(dto);
+            return Ok();
+        }
+        [HttpPut("DeleteFromClass")]
+        public async Task<IActionResult> DeleteStudentsRelationToClass(int id)
+        {
+            var student = await _repository.DeleteStudentFromClass(id);
+
+            return Ok();
         }
     }
 }

@@ -33,6 +33,9 @@ export class StudentListComponent implements OnInit {
   onAddGrade(id:Number){
     this.router.navigateByUrl('grade/addGrade/'+id);
   }
+  onDeleteFromClass(student:Student){
+
+  }
 
 
 }

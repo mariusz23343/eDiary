@@ -115,5 +115,30 @@ namespace eDiaryAPI.Repositories
             var studentList = await _context.Students.ToListAsync();
             return studentList;
         }
+        public async Task<IList<Student>> GetAllStudentWithoutClass()
+        {
+            var list = await _context.Students.Where(x => x.ClassId == null).ToListAsync();
+            return list;
+        }
+        public async Task<Student> PutStudentsClass(PutStudentsClassDto dto)
+        {
+            var student = await _context.Students.FirstOrDefaultAsync(x => x.Id == dto.StudentId);
+            var studentClass = await _context.SchoolClasses.FirstOrDefaultAsync(x => x.Id == dto.ClassId);
+
+            student.FkClass = dto.ClassId;
+            student.ClassId = studentClass;
+
+            await _context.SaveChangesAsync();
+            return student;
+        }
+        public async Task<Student> DeleteStudentFromClass(int id)
+        {
+            var student = await _context.Students.Include(c=>c.ClassId).FirstOrDefaultAsync(i=>i.Id==id);
+            student.FkClass = 0;
+            student.ClassId = null;
+            await _context.SaveChangesAsync();
+            return student;
+        }
     }
+
 }

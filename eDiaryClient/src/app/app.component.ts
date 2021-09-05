@@ -21,4 +21,10 @@ export class AppComponent {
   onDeleteStudent(){
     this.router.navigateByUrl( 'deleteStudent');
   }
+  onAddStudentToClass(){
+    this.router.navigateByUrl('addStudentToClass');
+  }
+  onHome(){
+    this.router.navigateByUrl('');
+  }
 }

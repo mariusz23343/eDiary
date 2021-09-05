@@ -15,6 +15,7 @@ import { AddStudentComponent } from './add-student/add-student.component';
 import { AddClassComponent } from './add-class/add-class.component';
 import { AddGradeComponent } from './add-grade/add-grade.component';
 import { DeleteStudentComponent } from './delete-student/delete-student.component';
+import { AddStudentToClassComponent } from './add-student-to-class/add-student-to-class.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { DeleteStudentComponent } from './delete-student/delete-student.componen
     AddStudentComponent,
     AddClassComponent,
     AddGradeComponent,
-    DeleteStudentComponent
+    DeleteStudentComponent,
+    AddStudentToClassComponent
   ],
   imports: [
     BrowserModule,

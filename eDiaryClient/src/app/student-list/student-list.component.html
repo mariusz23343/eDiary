@@ -28,7 +28,7 @@
           <button class="btn btn-outline-success m-1" style="width:100%" (click)="onAddGrade(student.id)">Dodaj ocenę</button>
       </td>
         <td><button class="btn btn-outline-success m-1" style="width:100%"(click)="onShowGrades(student)">Oceny Ucznia</button></td>
-        <td><button type="button" class="btn btn-outline-danger m-1" style="width:100">Usuń  Z Klasy</button></td>
+        <td><button type="button" class="btn btn-outline-danger m-1" (click)="onDeleteFromClass(student)" style="width:100">Usuń  Z Klasy</button></td>
       </tr>
     </tbody>
   </table>

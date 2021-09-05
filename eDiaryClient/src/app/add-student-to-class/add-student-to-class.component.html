@@ -1,0 +1,19 @@
+<div *ngIf="!students?.length; else elseBlock"><p style="color: red; font-size: 25px;">Brak uczniów bez przypisanej klasy</p></div>
+<ng-template #elseBlock>
+
+<div class="input-group input-group-lg">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-lg">Ocena</span>
+  </div>
+
+</div>
+<select [(ngModel)]="selectedClass" style="width:100%; font-size: larger; margin-top: 10px;">
+  <option *ngFor="let schoolClass of schoolClasses" [ngValue] = "schoolClass" >{{schoolClass.className}}</option>
+</select>
+<select [(ngModel)]="selectedStudent" style="width:100%; font-size: larger; margin-top: 10px;">
+  <option *ngFor="let student of students" [ngValue] = "student" >{{student.name}} {{student.surname}}</option>
+</select>
+<button (click)="onShow()">Pokaz</button>
+<button (click)="onSave()" style="margin-top: 22px;" class="btn btn-outline-success col-md-12 text-center">Zapisz</button>
+
+</ng-template>

@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StudentGradeComponent } from './student-grade/student-grade.component';
 import { AddStudentComponent } from './add-student/add-student.component';
+import { AddStudentToClassComponent } from './add-student-to-class/add-student-to-class.component';
 
 
 
@@ -18,6 +19,7 @@ const routes:Routes=[
   {path: 'class/addClass/', component: AddClassComponent},
   {path: 'grade/addGrade/:id', component: AddGradeComponent},
   {path: 'deleteStudent', component: DeleteStudentComponent},
+  {path:'addStudentToClass', component: AddStudentToClassComponent}
 
 ]
 @NgModule({
