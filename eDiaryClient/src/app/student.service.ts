@@ -48,4 +48,7 @@ export class ShowStudentService {
   addClassToStudent(dto:AddClassToStudent){
     return this.http.put<Student>('https://localhost:44354/api/StudentChange', dto);
   }
+  onDeleteFromClass(id:Number){
+    return this.http.get<Student>('https://localhost:44354/api/StudentChange/DeleteFromClass?id='+id);
+  }
 }

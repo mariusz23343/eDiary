@@ -34,7 +34,8 @@ export class StudentListComponent implements OnInit {
     this.router.navigateByUrl('grade/addGrade/'+id);
   }
   onDeleteFromClass(student:Student){
-
+      this.studentService.onDeleteFromClass(student.id).subscribe(res=>window.location.reload());
+     
   }
 
 

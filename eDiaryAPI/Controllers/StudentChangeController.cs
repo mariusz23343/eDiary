@@ -85,12 +85,12 @@ namespace eDiaryAPI.Controllers
             var student = await _repository.PutStudentsClass(dto);
             return Ok();
         }
-        [HttpPut("DeleteFromClass")]
+        [HttpGet("DeleteFromClass")]
         public async Task<IActionResult> DeleteStudentsRelationToClass(int id)
         {
             var student = await _repository.DeleteStudentFromClass(id);
 
-            return Ok();
+            return Ok(student);
         }
     }
 }
