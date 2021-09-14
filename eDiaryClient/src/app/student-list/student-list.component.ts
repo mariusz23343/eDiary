@@ -35,7 +35,10 @@ export class StudentListComponent implements OnInit {
   }
   onDeleteFromClass(student:Student){
       this.studentService.onDeleteFromClass(student.id).subscribe(res=>window.location.reload());
-     
+
+  }
+  onEditStudent(student:Student){
+    this.router.navigateByUrl('student/edit/'+student.id);
   }
 
 

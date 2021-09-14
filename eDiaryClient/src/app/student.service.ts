@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { StudentAdd } from './add-student/add-student.component';
+import { StudentToEdit } from './edit-student/edit-student.component';
 export interface Student{
   id:Number,
   name:string,
@@ -50,5 +51,11 @@ export class ShowStudentService {
   }
   onDeleteFromClass(id:Number){
     return this.http.get<Student>('https://localhost:44354/api/StudentChange/DeleteFromClass?id='+id);
+  }
+  getOneStudentToEdit(id:Number){
+    return this.http.get<StudentToEdit>('https://localhost:44354/api/StudentChange/GetToEdit?id='+id);
+  }
+  EditStudent(studentToEdit: StudentToEdit){
+    return this.http.put<Student>('https://localhost:44354/api/StudentChange/EditStudent', studentToEdit);
   }
 }

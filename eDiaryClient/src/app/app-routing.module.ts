@@ -1,3 +1,4 @@
+import { EditStudentComponent } from './edit-student/edit-student.component';
 import { DeleteStudentComponent } from './delete-student/delete-student.component';
 import { AddGradeComponent } from './add-grade/add-grade.component';
 import { AddClassComponent } from './add-class/add-class.component';
@@ -19,7 +20,8 @@ const routes:Routes=[
   {path: 'class/addClass/', component: AddClassComponent},
   {path: 'grade/addGrade/:id', component: AddGradeComponent},
   {path: 'deleteStudent', component: DeleteStudentComponent},
-  {path:'addStudentToClass', component: AddStudentToClassComponent}
+  {path:'addStudentToClass', component: AddStudentToClassComponent},
+  {path: 'student/edit/:id', component: EditStudentComponent}
 
 ]
 @NgModule({

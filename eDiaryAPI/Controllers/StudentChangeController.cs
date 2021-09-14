@@ -1,4 +1,5 @@
 ﻿using eDiaryAPI.Mappers;
+using eDiaryAPI.Models.DbModels;
 using eDiaryAPI.Models.DTOs;
 using eDiaryAPI.Repositories;
 using Microsoft.AspNetCore.Http;
@@ -91,6 +92,18 @@ namespace eDiaryAPI.Controllers
             var student = await _repository.DeleteStudentFromClass(id);
 
             return Ok(student);
+        }
+        [HttpGet("GetToEdit")]
+        public async Task<IActionResult> GetToEdit(int id)
+        {
+            var student = await _repository.GetOneStudentToEdit(id);
+            return Ok(student);
+        }
+        [HttpPut("EditStudent")]
+        public async Task<IActionResult> EditStudent(EditStudent student)
+        {
+            var edited = await _repository.EditStudent(student);
+            return Ok(_mapper.MapResponse(edited));
         }
     }
 }

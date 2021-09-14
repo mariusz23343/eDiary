@@ -139,6 +139,26 @@ namespace eDiaryAPI.Repositories
             await _context.SaveChangesAsync();
             return student;
         }
+        public async Task<Student> GetOneStudentToEdit(int id)
+        {
+            var student = await _context.Students.FirstOrDefaultAsync(x => x.Id == id);
+            return student;
+        }
+
+        public async Task<Student> EditStudent(EditStudent studentFromClient)
+        {
+            var student = await _context.Students.FirstOrDefaultAsync(x => x.Id == studentFromClient.Id);
+            student.Login = studentFromClient.Login;
+            student.Name = studentFromClient.Name;
+            student.Surname = studentFromClient.Surname;
+            student.Pesel = studentFromClient.Pesel;
+            student.ParentEmail = studentFromClient.ParentEmail;
+            student.BirthDate = studentFromClient.BirthDate;
+
+            await _context.SaveChangesAsync();
+            return student;
+
+        }
     }
 
 }

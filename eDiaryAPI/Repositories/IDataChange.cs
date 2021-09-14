@@ -17,5 +17,7 @@ namespace eDiaryAPI.Repositories
         public Task<IList<Student>> GetAllStudentWithoutClass();
         public Task<Student> PutStudentsClass(PutStudentsClassDto dto);
         public Task<Student> DeleteStudentFromClass(int id);
+        public Task<Student> GetOneStudentToEdit(int id);
+        public Task<Student> EditStudent(EditStudent student);
     }
 }

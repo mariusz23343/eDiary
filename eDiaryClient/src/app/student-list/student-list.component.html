@@ -3,7 +3,7 @@
     <thead class="thead-dark">
 
       <tr>
-        <td>Id</td>
+
       <td>Imie</td>
       <td>Nazwisko</td>
       <td>Data</td>
@@ -17,7 +17,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let student of students">
-        <td>{{student.id}}</td>
+
         <td>{{student.name}}</td>
         <td>{{student.surname}}</td>
         <td>{{student.date}}</td>
@@ -26,7 +26,8 @@
 
         <td>
           <button class="btn btn-outline-success m-1" style="width:100%" (click)="onAddGrade(student.id)">Dodaj ocenę</button>
-      </td>
+        </td>
+        <td><button class="btn btn-outline-warning m-1" (click)="onEditStudent(student)" type="button">Edytuj Ucznia</button></td>
         <td><button class="btn btn-outline-success m-1" style="width:100%"(click)="onShowGrades(student)">Oceny Ucznia</button></td>
         <td><button type="button" class="btn btn-outline-danger m-1" (click)="onDeleteFromClass(student)" style="width:100">Usuń  Z Klasy</button></td>
       </tr>
